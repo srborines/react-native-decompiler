@@ -97,6 +97,7 @@ export default class BabelInlineConverters extends Plugin {
     this.debugLog('removed inline babel interopRequireDefault inline:');
     this.debugLog(this.debugPathToCode(path));
 
+    // @ts-ignore
     this.mergeBindings(path, node.id.name, moduleSourcePath.node.id.name);
 
     path.scope.bindings[test.left.left.name].path.remove();
